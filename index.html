@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather Forecast App</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="weather-container">
+
+        <header class="page-header">
+            <h1>Weather Forecast</h1>
+            <p>Discover the weather anywhere in the world.</p>
+        </header>
+
+        <form id="search-form" class="search-box">
+
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+                aria-label="Search city"
+                required
+            >
+
+            <button type="submit" id="search-button">
+                Search
+            </button>
+
+        </form>
+
+        <p id="status-message" role="status" aria-live="polite"></p>
+
+        
+        <section id="current-weather" class="current-weather hidden">
+
+            <h2 id="city-name">City Name</h2>
+
+            <div class="current-details">
+
+                <div class="weather-icon" id="current-icon">☀️</div>
+
+                <div>
+                    <p class="temperature">
+                        <span id="temperature">--</span>°C
+                    </p>
+
+                    <p id="weather-description">
+                        Weather condition
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="weather-info">
+
+                <div class="info-card">
+                    <span>Feels Like</span>
+                    <strong id="feels-like">--°C</strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Humidity</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Wind Speed</span>
+                    <strong id="wind-speed">-- km/h</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="forecast-section" class="forecast-section hidden">
+
+            <h2>5-Day Forecast</h2>
+
+            <div id="forecast-container" class="forecast-container">
+               
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Weather information powered by Open-Meteo</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
